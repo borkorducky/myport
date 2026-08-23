@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | High School Student</title>
+    
+    <!-- นำเข้า Tailwind CSS สำหรับการตกแต่งเว็บไซต์ให้สวยงามและ Responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- นำเข้าฟอนต์ Google Fonts (Inter และ Prompt สำหรับภาษาไทย) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- กำหนดสไตล์พื้นฐานและฟอนต์หลัก -->
+    <style>
+        body {
+            font-family: 'Prompt', 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800 antialiased selection:bg-orange-200 selection:text-orange-900">
+
+    <!-- แท็ก <header> ใช้สำหรับส่วนหัวของเว็บไซต์ -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <!-- แท็ก <nav> ใช้สำหรับเมนูนำทาง -->
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- โลโก้หรือชื่อเว็บไซต์ -->
+            <a href="#" class="text-2xl font-bold text-orange-500 hover:text-orange-600 transition duration-300">
+                My<span class="text-gray-800">Portfolio</span>
+            </a>
+            
+            <!-- เมนูนำทาง (ซ่อนในหน้าจอมือถือ แสดงในจอขนาดกลางขึ้นไป) -->
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="#hero" class="text-gray-600 hover:text-orange-500 transition duration-300">หน้าแรก</a></li>
+                <li><a href="#about" class="text-gray-600 hover:text-orange-500 transition duration-300">เกี่ยวกับฉัน</a></li>
+                <li><a href="#projects" class="text-gray-600 hover:text-orange-500 transition duration-300">ผลงาน</a></li>
+                <li><a href="#contact" class="text-gray-600 hover:text-orange-500 transition duration-300">ติดต่อ</a></li>
+            </ul>
+
+            <!-- ปุ่มติดต่อด่วนด้านขวาบน -->
+            <a href="#contact" class="hidden md:inline-block bg-orange-500 text-white px-5 py-2 rounded-full font-medium hover:bg-orange-600 transition duration-300 shadow-md hover:shadow-lg">
+                ทักทายกันเลย!
+            </a>
+            
+            <!-- ปุ่มเมนูสำหรับมือถือ (แสดงเฉพาะหน้าจอมือถือ) -->
+            <button class="md:hidden text-gray-600 hover:text-orange-500 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- แท็ก <main> ใช้ครอบคลุมเนื้อหาหลักของหน้าเว็บ -->
+    <main>
+        
+        <!-- แท็ก <section> ใช้แบ่งหมวดหมู่เนื้อหา หน้า Hero เพื่อดึงดูดสายตา -->
+        <section id="hero" class="min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-white to-orange-50 py-20 overflow-hidden relative">
+            
+            <!-- ลวดลายพื้นหลังเพื่อความสวยงาม -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-orange-100 blur-3xl opacity-50 z-0"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-orange-200 blur-3xl opacity-40 z-0"></div>
+
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+                <!-- ส่วนข้อความแนะนำตัว (ฝั่งซ้าย) -->
+                <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+                    <p class="text-orange-500 font-semibold mb-3 tracking-wider text-sm md:text-base uppercase">สวัสดีครับ ผมชื่อ</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+                        นายพิสิฐพงค์ ภูมิภักดิ์ <br>
+                        <span class="text-orange-500">มัธยมศึกษาปีที่ 6</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        ยินดีต้อนรับสู่พื้นที่รวบรวมผลงานของผม! ผมมีความมุ่งมั่นและสนใจในด้านเทคโนโลยีรวมถึงการออกแบบ พร้อมเรียนรู้และพัฒนาทักษะใหม่ๆ อยู่เสมอ เพื่อนำความรู้ไปต่อยอดในอนาคตสู่การเป็นผู้ประกอบการโรงงานอุตสาหกรรม
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                        <a href="#projects" class="bg-orange-500 text-white px-8 py-3.5 rounded-full font-medium hover:bg-orange-600 transition duration-300 shadow-lg shadow-orange-500/30 text-center">
+                            ดูผลงานของผม
+                        </a>
+                        <a href="#about" class="bg-white text-orange-500 border-2 border-orange-200 px-8 py-3.5 rounded-full font-medium hover:border-orange-500 transition duration-300 text-center">
+                            รู้จักผมมากขึ้น
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- ส่วนรูปภาพ (ฝั่งขวา) -->
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                        <!-- รูปโปรไฟล์แบบ Placeholder สำหรับให้ไปเปลี่ยนรูปจริงทีหลัง -->
+                        <div class="absolute inset-0 bg-orange-400 rounded-full blur-2xl opacity-20 transform scale-110"></div>
+                        <img src="https://lh3.googleusercontent.com/d/1q5oDj5eUx4Sgd46deH2hfMu89-mZPX5k" alt="รูปโปรไฟล์" class="relative z-10 rounded-full shadow-2xl border-4 border-white object-cover w-full h-full">
+                        <!-- ป้ายแบนเนอร์ลอยๆ -->
+                        <div class="absolute top-10 -left-6 bg-white px-4 py-2 rounded-xl shadow-lg font-semibold text-gray-800 text-sm z-20 border border-gray-100 flex items-center gap-2">
+                            <span>🎓</span> เกรดเฉลี่ย 3.94
+                        </div>
+                        <div class="absolute bottom-10 -right-6 bg-white px-4 py-2 rounded-xl shadow-lg font-semibold text-gray-800 text-sm z-20 border border-gray-100 flex items-center gap-2">
+                            <span>💡</span> ชอบการออกแบบนวัตกรรมสิ่งใหม่ๆ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ส่วน About: บอกเล่าประวัติและการศึกษา -->
+        <section id="about" class="py-24 bg-white relative">
+            <div class="container mx-auto px-6">
+                <!-- หัวข้อ Section -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">เกี่ยวกับฉัน</h2>
+                    <div class="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <!-- ประวัติส่วนตัวและการศึกษา -->
+                    <div class="lg:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-6 text-orange-600 flex items-center">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            ประวัติการศึกษาและเป้าหมาย
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                            ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6 สายการเรียนเทคโนโลยีและนวตกรรม ที่โรงเรียนธัญรัตน์ จังหวัดปทุมธานี
+                            ผมมีความสนใจด้านนวัตกรรมและการทำงานร่วมกับผู้อื่น เป้าหมายสูงสุดคือการสอบเข้าศึกษาต่อในคณะวิศวกรรมศาสตร์ สาขาวิชาวิศวกรรมเมคคาทรอนิกส์และระบบวัดคุม สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง เพื่อนำความรู้ไปต่อยอดในอนาคต
+                        </p>
+                        
+                        <!-- List ข้อมูลย่อย -->
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-orange-500 font-bold mr-3 mt-1">✓</span>
+                                    <div>
+                                        <span class="font-semibold text-gray-900 block">โรงเรียน</span>
+                                        โรงเรียนธัญรัตน์
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-orange-500 font-bold mr-3 mt-1">✓</span>
+                                    <div>
+                                        <span class="font-semibold text-gray-900 block">สายการเรียน</span>
+                                        เทคโนโลยีและนวัตกรรม
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-orange-500 font-bold mr-3 mt-1">✓</span>
+                                    <div>
+                                        <span class="font-semibold text-gray-900 block">งานอดิเรก</span>
+                                        ออกแบบนวัตกรรม,พัฒนาเว็บไซต์,ถ่ายภาพดิจิตอล 
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- แถบพลังทักษะ (Skills Progress) -->
+                    <div class="lg:w-1/2 w-full bg-orange-50 p-8 md:p-10 rounded-3xl border border-orange-100 shadow-sm">
+                        <h3 class="text-2xl font-semibold mb-8 text-gray-900">ทักษะและความสามารถ (Skills)</h3>
+                        <div class="space-y-6">
+                            <!-- Skill 1 -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-base font-medium text-gray-700">ความเป็นผู้นำ / ทำงานเป็นทีม</span>
+                                    <span class="text-sm font-bold text-orange-600">80%</span>
+                                </div>
+                                <div class="w-full bg-orange-200/50 rounded-full h-3">
+                                    <div class="bg-orange-500 h-3 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 2 -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-base font-medium text-gray-700">การนำเสนองาน (Presentation)</span>
+                                    <span class="text-sm font-bold text-orange-600">85%</span>
+                                </div>
+                                <div class="w-full bg-orange-200/50 rounded-full h-3">
+                                    <div class="bg-orange-500 h-3 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 3 -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-base font-medium text-gray-700">ทักษะคอมพิวเตอร์พื้นฐาน / การออกแบบ</span>
+                                    <span class="text-sm font-bold text-orange-600">80%</span>
+                                </div>
+                                <div class="w-full bg-orange-200/50 rounded-full h-3">
+                                    <div class="bg-orange-500 h-3 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 4 -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-base font-medium text-gray-700">ภาษาอังกฤษ (สื่อสารได้ดี)</span>
+                                    <span class="text-sm font-bold text-orange-600">60%</span>
+                                </div>
+                                <div class="w-full bg-orange-200/50 rounded-full h-3">
+                                    <div class="bg-orange-500 h-3 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ส่วน Projects: แสดงการ์ดผลงานที่โดดเด่น -->
+        <section id="projects" class="py-24 bg-slate-50">
+            <div class="container mx-auto px-6">
+                
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">ผลงานและกิจกรรม</h2>
+                    <p class="text-gray-500 mb-6 max-w-2xl mx-auto text-lg">รวบรวมกิจกรรมที่โดดเด่นในช่วงมัธยมปลาย ทั้งด้านวิชาการ จิตอาสา และกิจกรรมส่วนรวมของโรงเรียน</p>
+                    <div class="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Grid สำหรับแสดงผลการ์ด -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- แท็ก <article> ใช้ครอบคลุมเนื้อหาที่มีความหมายสมบูรณ์ในตัว (เช่น ข่าว 1 ชิ้น หรือ ผลงาน 1 ชิ้น) -->
+                    <!-- โครงการที่ 1 -->
+                    <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group border border-gray-100">
+                        <div class="h-56 overflow-hidden relative">
+                            <!-- รูป Placeholder (600x400) -->
+                            <img src="https://lh3.googleusercontent.com/d/1WMlQnMknnTnvDeWHbYufz3CiLkAIs-2N" alt="ผลงานวิชาการ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <!-- ป้ายกำกับหมวดหมู่ -->
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-orange-600 uppercase tracking-wider">
+                                การแข่งขัน
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors">เข้าร่วมการแข่งขัน Coding Thailang 2026 AI Inspires the future ตัวแทนภาคกลาง</h3>
+                            <p class="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed">
+                                เข้าร่วมการแข่งขัน Coding Thailang 2026 AI Inspires the future ตัวแทนภาคกลาง
+                            </p>
+                            <a href="#" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm">
+                                ดูรูปภาพเพิ่มเติม 
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- โครงการที่ 2 -->
+                    <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group border border-gray-100">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://lh3.googleusercontent.com/d/1A0DLmp4BgkcTwt8poQSwBJoe1-efCPHw" alt="รูปภาพ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-orange-600 uppercase tracking-wider">
+                                กิจกรรม
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors">ค่ายเปิดโลกนักคิดพิชิตนวัตกรรม</h3>
+                            <p class="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed">
+                                เข้าร่วมค่ายเปิดโลกนักคิดพิชิตนวัตกรรม ได้ฝึกทักษะการเป็นผู้นำและการนำเสนอแนวคิด
+                            </p>
+                            <a href="#" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm">
+                                ดูรูปภาพเพิ่มเติม 
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- โครงการที่ 3 -->
+                    <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group border border-gray-100">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://lh3.googleusercontent.com/d/16Za3WHs1hFsslgA_7ZOGB9O8ySGgY4lx" alt="รูปภาพ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-orange-600 uppercase tracking-wider">
+                                จิตอาสา
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors">จิตอาสา อพวช. รุ่น 3</h3>
+                            <p class="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed">
+                                ได้รับการคัดเลือกเป็นนักเรียนจิตอาสา ค่ายปิดเทอมหรรษา โดยได้รับหน้าที่เป็นฝ่ายต้อนรับ
+                            </p>
+                            <a href="#" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm">
+                                ดูรูปภาพเพิ่มเติม 
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ส่วน Contact: กล่องข้อความและข้อมูลการติดต่อ -->
+        <section id="contact" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col md:flex-row">
+                    
+                    <!-- ส่วนข้อมูลการติดต่อ (ฝั่งซ้าย) -->
+                    <div class="bg-orange-500 text-white p-12 md:w-2/5 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-10 -mt-10"></div>
+                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-white opacity-10 rounded-full -ml-10 -mb-10"></div>
+                        
+                        <div class="relative z-10">
+                            <h2 class="text-3xl font-bold mb-6">ช่องทางการติดต่อ</h2>
+                            <p class="text-orange-100 mb-10 text-lg">
+                                หากสนใจในผลงาน หรือมีข้อเสนอแนะเพิ่มเติม สามารถส่งข้อความหรือติดต่อได้ตามช่องทางเหล่านี้ครับ
+                            </p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-orange-600 p-2 rounded-lg mr-4">
+                                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                    <div class="pt-1">
+                                        <p class="text-sm text-orange-200">อีเมล</p>
+                                        <p class="font-medium">phisitpong3@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-orange-600 p-2 rounded-lg mr-4">
+                                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                    </div>
+                                    <div class="pt-1">
+                                        <p class="text-sm text-orange-200">โทรศัพท์</p>
+                                        <p class="font-medium">0941798328</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ส่วนฟอร์มติดต่อ (ฝั่งขวา) -->
+                    <div class="p-12 md:w-3/5">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">ฝากข้อความถึงฉัน</h3>
+                        <!-- ฟอร์มถูกผูกกับฟังก์ชัน JavaScript ด้านล่างเพื่อโชว์ Modal แทนการใช้ alert() -->
+                        <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">ชื่อ-นามสกุล</label>
+                                <input type="text" id="name" class="w-full px-5 py-3 bg-slate-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all" placeholder="ชื่อของคุณ" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">อีเมล</label>
+                                <input type="email" id="email" class="w-full px-5 py-3 bg-slate-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all" placeholder="example@gmail.com" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">ข้อความ</label>
+                                <textarea id="message" rows="4" class="w-full px-5 py-3 bg-slate-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all resize-none" placeholder="พิมพ์ข้อความของคุณที่นี่..." required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-orange-500 text-white font-bold py-4 px-6 rounded-xl hover:bg-orange-600 transition duration-300 shadow-md flex justify-center items-center gap-2">
+                                ส่งข้อความ
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            </button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- แท็ก <footer> สำหรับส่วนท้ายของเว็บไซต์ -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <a href="#" class="text-3xl font-bold mb-6 inline-block">
+                My<span class="text-orange-500">Portfolio</span>
+            </a>
+            <p class="text-gray-400 text-base mb-8 max-w-md mx-auto">
+                เว็บไซต์ Portfolio สำหรับยื่นเข้าศึกษาต่อระดับอุดมศึกษา สร้างสรรค์ด้วยความตั้งใจ
+            </p>
+
+            
+            <!-- เส้นกั้นลิขสิทธิ์ -->
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm">&copy; 2026 Pisitpong Phumiphak.Portfolio</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- กล่องข้อความแจ้งเตือน (Modal) ปกติจะซ่อนไว้ด้วยคลาส hidden -->
+    <div id="successModal" class="fixed inset-0 flex items-center justify-center z-[100] hidden bg-gray-900 bg-opacity-60 backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-3xl p-10 max-w-sm w-full mx-4 shadow-2xl text-center transform transition-transform scale-100">
+            <!-- ไอคอนสำเร็จสีเขียว -->
+            <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">ส่งข้อความสำเร็จ!</h3>
+            <p class="text-gray-600 mb-8 text-sm">ขอบคุณที่ติดต่อเข้ามานะครับ</p>
+            <button onclick="closeModal()" class="w-full bg-orange-500 text-white font-bold py-3 px-4 rounded-xl hover:bg-orange-600 transition duration-300">
+                ตกลง
+            </button>
+        </div>
+    </div>
+
+    <!-- สคริปต์ JavaScript เบื้องต้น -->
+    <script>
+        // ฟังก์ชันจัดการตอนกดปุ่ม Submitฟอร์ม
+        function handleFormSubmit(event) {
+            event.preventDefault(); // ป้องกันไม่ให้หน้าเว็บรีเฟรช
+            
+            // แสดง Modal แจ้งเตือน
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('hidden');
+            
+            // ล้างข้อมูลในฟอร์มหลังจากกดส่ง
+            event.target.reset();
+        }
+
+        // ฟังก์ชันสำหรับปิด Modal
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
